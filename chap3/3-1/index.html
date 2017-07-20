@@ -16,17 +16,18 @@
 </header>
 <div class="main-wrapper">
 <section>
-	
+	<p id ="list"></p>
 </section>
 </div><!-- /.main-wrapper -->
 <footer>JavaScript Samples</footer>
 
 <script>
-if(window.confirm('ゲームスタート！準備はいい？')){
-	console.log('ゲームを開始します');
-}
-else{
-	console.log('ゲームを終了します');
+var todo = ['aaa', 'bbb', 'ccc', 'ddd'];
+todo.push('eee');
+for( var i=0; i<todo.length; i++ ){
+	var li = document.createElement('li'); //idがlistの要素を取得
+	li.textContent = todo[i];
+	document.getElementById('list').appendChild(li);
 }
 </script>
 
